@@ -14,6 +14,7 @@ def get_pivot_index(arr, left, right):
         pivot = left
     return pivot
 
+# after sorting
 def get_pivot_point(arr, left,right):
     pivotIndex = get_pivot_index(arr, left, right)
     pivotValue = arr[pivotIndex]
