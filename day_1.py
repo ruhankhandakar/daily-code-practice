@@ -14,7 +14,7 @@ def get_pivot_index(arr, left, right):
         pivot = left
     return pivot
 
-def get_partition(arr, left,right):
+def get_pivot_point(arr, left,right):
     pivotIndex = get_pivot_index(arr, left, right)
     pivotValue = arr[pivotIndex]
     arr[pivotIndex], arr[left] = arr[left], arr[pivotIndex]
@@ -31,7 +31,7 @@ def find_element(arr, left, right, k):
     # Check whether k is still inside the partition
     if k > 0 and k <= (right - left + 1):
         # get the pivot
-        pivot_index = get_partition(arr, left, right)
+        pivot_index = get_pivot_point(arr, left, right)
         
         # If k happens to be on the pivot
         if (pivot_index - left == k - 1): 
